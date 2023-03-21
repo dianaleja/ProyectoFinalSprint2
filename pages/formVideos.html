@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/formVideos.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Formulario Subir Video</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <figure class="header__figure">
+          <img src="..//imagenes/logo.png" alt="Logo tube" />
+        </figure>
+        <ul class="header__list">
+          <li>VideoTube</li>
+        </ul>
+
+        
+        </form>
+        <h3 class="header__subir"> <a class="header__link"  href=""style="color:#fff; text-decoration:none"> Subir Video
+            <span class="material-symbols-outlined"> arrow_upward </span></a>
+        </h3>
+      </nav>
+    </header>
+    <main>
+      <form id="form">
+        <label for="name">Nombre</label>
+        <input id="name" type="text" placeholder="Ingrese el nombre del video">
+        
+        <label for="image">Imagen del video</label>
+        <input id="image" type="text" placeholder="Ingrese la Imagen del video">
+        
+        <label for="video">Video</label>
+        <input id="video" type="text" placeholder="Ingrese la URL del video">
+        
+        <label for="autorImage">Avatar del autor</label>
+        <input id="autorImage" type="text" placeholder="Ingrese el Avactar del Autor">
+        
+        <label for="autor">Autor</label>
+        <input id="autor" type="text" placeholder="Ingrese el nombre Autor">
+        
+        <label for="category">Categoría del video</label>
+        <select name="" id="category">
+          <option value="">Seleccione una opción</option>
+          <option value="Short Film">Video Corto</option>
+          <option value="Dibujo">Dibujo</option>
+          <option value="Pintura">Pintura</option>
+        </select>
+        <label for="visit">Visitas</label>
+        <input id="visit" type="number" placeholder="Ingrese el numero de visitas y fecha">
+        <button type="submit">Subir video</button>
+        
+
+      </form>
+
+    </main>
+
+
+
+
+    <script src="../scripts/formVideos.js" type="module"></script>
+  </body>
+</html>

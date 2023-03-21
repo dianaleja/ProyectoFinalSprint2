@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Sprint 2 Aplicación VideoTube</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <figure class="header__figure">
+          <img src="./imagenes/logo.png" alt="Logo tube" />
+        </figure>
+        <ul class="header__list">
+          <li>VideoTube</li>
+        </ul>
+
+        <form class="search-bar">
+          <input type="text" class="search__placeholder"  placeholder="Buscar" name="" id="" />
+          <div class="actions">
+            <button type="submit">
+              <span class="material-icons">search</span>
+            </button>
+          </div>
+        </form>
+        
+        <h3 class="header__subir"> <a href="../pages/formVideos.html" style="color:#fff; text-decoration:none">
+          Subir Video<span class="material-symbols-outlined">
+            <span class="material-symbols-outlined">
+              arrow_upward
+              </span>
+            </a>
+        </h3>
+      </nav>
+    </header>
+    <section class="seccion__botones">
+      <button name="all">Todos</button>
+      <button name="Pintura">Pintura</button>
+      <button name="Dibujo">Dibujo</button>
+      <button name="Short Film">Short Film</button>
+    </section>
+
+    <main class="main">
+      <section class="main_cards"></section>
+    </main>
+    <footer></footer>
+    <script src="./scripts/script.js" type="module"></script>
+  </body>
+</html>
