@@ -2,6 +2,8 @@ import { videosFavoritos } from "./data.js";
 
 console.log(videosFavoritos)
 
+
+
 const videos =
     JSON.parse(sessionStorage.getItem("videos")) || videosFavoritos;
 //mostrar los videos de data del array en las cards
@@ -16,7 +18,7 @@ const printVideos = (container, videos) => {
         container.innerHTML += `
         <article class="cards">
             <figure class="cards__figure">
-                <img class="cards__image" data-card='cards'name=${videos.id} src=${videos.image} alt=${videos.name}> 
+                <img class="cards__image" id=${videos.seenIn.category}" data-card='cards'name=${videos.id} src=${videos.image} alt=${videos.name}> 
             </figure>
             <section class="info">
                 <figure>        
@@ -51,14 +53,21 @@ document.addEventListener("click", (event) => {
     //     const dataCardAttribute = event.target.getAttribute('data-card');
     //     console.log(dataCardAttribute);
     // }
+
+
     const dataCardAttribute = event.target.getAttribute("data-card");
+   
     if (dataCardAttribute === "cards") {
+        const category = event.target.getAttribute("id")
         // console.log('Quiero ir a la página de detalles del video');
         const id = event.target.getAttribute("name");
+        sessionStorage.setItem("category",JSON.stringify(category))
         sessionStorage.setItem("idVideos", JSON.stringify(id));
         window.location.href = "./pages/details.html";
     }
 });
+
+
 
 
 // ...........//Botones para filtrar videos...........

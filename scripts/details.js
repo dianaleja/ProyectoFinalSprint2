@@ -1,4 +1,5 @@
 import { videosFavoritos } from "../scripts/data.js"
+const guardarCategoria = JSON.parse(sessionStorage.getItem("category"));
 
 const videos =
     JSON.parse(sessionStorage.getItem("videos")) || videosFavoritos;
@@ -31,10 +32,10 @@ const showViedosInfo = (contenedor, videos) => {
       
     };
 
-
-document.addEventListener('DOMContentLoaded', () => {// //capturar información que tenemos guardada en session storage
-    const idVideosStg = JSON.parse(sessionStorage.getItem("idVideos")) || 0;
+const idVideosStg = JSON.parse(sessionStorage.getItem("idVideos")) || 0;
     const idVideos = Number(idVideosStg);
+document.addEventListener('DOMContentLoaded', () => {// //capturar información que tenemos guardada en session storage
+    
     console.log(idVideos);
 
 
@@ -67,19 +68,22 @@ const mostrarVideosSugeridos = (
   
     sectionVideos.classList.add("contenedorVideos");
     //Necesitamos el array de video sugeridos: Todos los videos exceptuando el que se está repoduciendo
-    const videosSugeridos = videosList.filter((videos) => videos.id !== idVideo);
+    const videosSugeridos = videosList.filter((videos) => videos.id != idVideos); 
   
     //Recorremos el array de videosSugeridos
     videosSugeridos.forEach(videos => {
       sectionVideos.innerHTML += `
-          <article class="main__cardSugerido">
+          
+      <article>
+
           <figure><img src=${videos.image} alt=${videos.name} /></figure>
+          
           <section>
-            <div class="card__div">
+            
               <h3 class="cards__name">${videos.name}</h3>
                   <img class="cards__avatar" src=${videos.autorImage} alt=${videos.autor}>
                   <span class="cards__autor>${videos.seenIn.visit}</span>
-            </div>
+           
             </section>
         </article>
           `;
